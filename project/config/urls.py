@@ -16,11 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-
+#se importa el modulo saludo para usarlo.
 from .views import fecha_hora, nombre, saludo, saludo2, tirar_dado
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    #----------------------------------
+    #Se crea el path en la url para que envie la info
+    #el parametro que toma en comillas es el nombre que tendria la url
+    #el 2° parametro que toma es la funcion creada en view que fue importada
+    #----------------------------------
     # path('saludo/', saludo),
     # path('saludo2/', saludo2),
     # path('nombre/<nombre>/<apellido>', nombre),
