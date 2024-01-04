@@ -32,5 +32,7 @@ urlpatterns = [
     # path('fecha_hora/', fecha_hora),
     # path('tirar_dado/', tirar_dado),
     path("", include("core.urls")),
+                             #cliente es el paquete que incluimos
+                                      #urls es el modulo que incluimos
     path("clientes/", include("cliente.urls")),
 ]
