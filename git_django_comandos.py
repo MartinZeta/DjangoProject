@@ -9,7 +9,9 @@
 
 #- git merge dev: Une las ramas, de desarrollo con la principal para guardar todos los cambios en la principal, antes que nada hay que moverse a la rama princi.
 
-#- git pull
+#- git pull: se utiliza cuando trabajamos desde otra computadora y queremos traer ese repositorio al area de trabajo, al terminar el trabajo hacer un git push para guardar y subir los cambios a github.
+
+#- git push: actualiza lo que hay en la nube, osea, github. Esto se realiza una vez echo el commit final para subir todos los cambios, siempre que se termina de trabajar hay que hacer un git push.
 """
 
 ### Entornos virtuales ###
@@ -58,11 +60,11 @@ y si salen actualizaciones que no proboque un error. ¡¡¡¡¡Tambien tiene que
 #pip install django:
 """instala el paquete django para usar los templates y comandos del mismo."""
 
-"""Creamos la carpeta Proyectodjango"""
+"""Creamos la carpeta Project"""
 
-#-cd ruta donde queremos ir: 
+#-cd (ruta donde queremos ir): 
 """
-Luego hay que moverse a la carpeta que creamos, en este caso, Proyectodjango
+Luego hay que moverse a la carpeta que creamos, en este caso, Project
 """
 
 #django-admin --version:

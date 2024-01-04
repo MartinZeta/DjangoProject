@@ -1,4 +1,4 @@
-# Coderhouse-56060-Django
+# Clase 9 y Clase 10
 
 ## Proyecto Django
 
@@ -89,12 +89,17 @@ Luego, creamos otra carpeta pero dentro de templates, con el nombre de la app, o
 
 # Clase 10
 
-Creamos la app, en este caso "cliente" con las configuraciones predeterminadas de django
+Creamos la app, en este caso "cliente" con las configuraciones predeterminadas de django, combiene crear varias apps para tener organizado.
 
--`python manage.py startapp cliente`: antes de ejecutar este codigo, hay que pararce sobre la carpeta project (que es la config), tambien donde esta manage.py
+-`python manage.py startapp cliente`: antes de ejecutar este codigo, hay que pararce sobre la carpeta project (que es la config), tambien donde esta manage.py. Por si acaso "cliente" es el nombre que toma el paquete, osea, la app.
 
--`python manage.py makemigrations`: Antes de ejecutar este comando, django tiene que tener la app installada en el modulo settings.py en INSTALLED_APPS se escribe el nombre del paquete. 
+-`python manage.py makemigrations`: Antes de ejecutar este comando, django tiene que tener la app installada en el modulo settings.py en INSTALLED_APPS del paquete config, se escribe el nombre del paquete, en este caso iria "cliente".
+Este comando se utiliza cada vez que realizamos un cambio o creamos un nuevo modelo, sirve para migrar todo lo creado.
 
--`python manage.py migrate`: Traduce todo lo que esta en migrations
+-`python manage.py migrate`: Traduce todo en un codigo django o SQL para poder verlo en la base de datos, este paso va luego de makemigrations.
+luego de migrar todo los modelos, podemos verlo en la base de datos llamada, db.sqlite3
+con el nombre de la app y nombre de la clase del modelo.
 
--`python manage.py createsuperuser`: usu: Martin o admin contra: 123456 o 123, Crea un usuario superior, maneja todo
+-`python manage.py createsuperuser`: usu: Martin o admin contra: 123456 o 123, Crea un super usario que maneja todo, nos permite entrar y usar el "admin" que se encuentra en config dentro del modulo urls.py. El path('admin/') que es la ruta se recomienda que sea otro lo mismo la usuario y contraseña porque eso permite hackear la pagina o lo creado.
+
+- luego para ver los clientes creados mediante un template en HTML, hay que crear la carpeta "templates", dentro otra con el mismo nombre de la app ("cliente") y por ultimo crear el modulo "index.html", dentro escribiremos el codigo en HTML.
