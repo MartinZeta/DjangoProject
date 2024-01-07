@@ -103,3 +103,9 @@ con el nombre de la app y nombre de la clase del modelo.
 -`python manage.py createsuperuser`: usu: Martin o admin contra: 123456 o 123, Crea un super usario que maneja todo, nos permite entrar y usar el "admin" que se encuentra en config dentro del modulo urls.py. El path('admin/') que es la ruta se recomienda que sea otro lo mismo la usuario y contraseña porque eso permite hackear la pagina o lo creado.
 
 - luego para ver los clientes creados mediante un template en HTML, hay que crear la carpeta "templates", dentro otra con el mismo nombre de la app ("cliente") y por ultimo crear el modulo "index.html", dentro escribiremos el codigo en HTML.
+
+- Templates: es lo que se ve.
+
+- views.py: es la informacion que se pasa a los templates
+
+-modelos.py: es la parte de nuestro proyecto que almacena, borra, modifica y manipula el caudal principal de los datos, apoyandose en una base de datos, sql o demas.
