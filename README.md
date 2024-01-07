@@ -108,4 +108,4 @@ con el nombre de la app y nombre de la clase del modelo.
 
 - views.py: es la informacion que se pasa a los templates
 
--modelos.py: es la parte de nuestro proyecto que almacena, borra, modifica y manipula el caudal principal de los datos, apoyandose en una base de datos, sql o demas.
+- modelos.py: es la parte de nuestro proyecto que almacena, borra, modifica y manipula el caudal principal de los datos, apoyandose en una base de datos, sql o demas.
