@@ -5,6 +5,8 @@ from django.shortcuts import render
 
 #Se importa Cliente para usar el modelo
 from . import models
+#Se importa ClienteForm para usar el modelo forms.py que son los formularios.
+from . import forms
 
 
 # Create your views here.
@@ -25,3 +27,12 @@ def pais_list(request):
     context = {"paises": paises}
     return render(request, "cliente/pais_list.html", context)
 
+def cliente_create(request):
+    if request.method == "POST":
+        form = forms.ClienteForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("cliente:cliente_list")
+    else:  # if request.method == "GET":
+        form = forms.ClienteForm()
+    return render(request, "cliente/cliente_create.html", {"form": form})
