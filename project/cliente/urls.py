@@ -1,11 +1,10 @@
 from django.urls import path
 
-from .views import index
-
-#app_name es para darle nombre al conjunto de la urls y sepa cual es su direccion para encontrarlo
-app_name = "cliente"
+from . import views
 
 urlpatterns = [
                     #name le da el nombre a este path para ubicarlo
-    path("", index, name="index"),
+    path("", views.index, name="index"),
+    path("pais/list", views.pais_list, name="pais_list"),
+    path("cliente/list", views.cliente_list, name="cliente_list"),
 ]

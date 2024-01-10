@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    #Titulo
-    <title>Coderhouse</title>
-</head>
-#Codigo en HTML donde se crea la parte visual
-<body>
-    <h1>Cliente</h1>
+{% extends 'core/base.html' %}
 
-    <ul>
-        {% for cliente in clientes %}
-            <li>{{ cliente.nombre }} {{ cliente.apellido }}</li>
-        {% endfor %}
-    </ul>
+{% block content %}
+    
 
-    <button><a href="{% url 'core:index' %}">Inicio</a></button>    
+<h2>CLIENTE</h2>
 
-</body>
-</html>
+    <div>
+        <button><a href="{% url 'cliente:pais_list' %}">Lista de países</a></button>
+        <button><a href="{% url 'cliente:cliente_list' %}">Lista de clientes</a></button>
+        {# <button><a href="{% url 'cliente:cliente_create' %}">Crear cliente</a></button>#}
+    </div>
+    <div>
+        <button><a href="{% url 'core:index' %}">Inicio</a></button>
+    </div>
+
+{% endblock content %}
