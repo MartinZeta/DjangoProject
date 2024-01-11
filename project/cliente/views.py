@@ -1,7 +1,7 @@
 #El modulo "views.py" trabaja la logica interna, se vincula views con "models.py" 
 # para trabajar con esos modelos. Tambien esta vinculado a "index.html" donde se muestran los templates
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 #Se importa Cliente para usar el modelo
 from . import models
