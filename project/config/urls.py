@@ -13,4 +13,6 @@ urlpatterns = [
                              #cliente es el paquete que incluimos
                                       #urls es el modulo que incluimos
     path("clientes/", include(("cliente.urls", "cliente"))),
+    path("productos/", include(("producto.urls", "producto"))),
 ]
+

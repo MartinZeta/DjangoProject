@@ -1,4 +1,5 @@
 {% extends 'core/base.html' %}    
+{% load static %}
 
 {% block title %}
     Coderhouse | Inicio
@@ -12,4 +13,23 @@
     <button><a href="{% url 'cliente:index' %}">Cliente</a></button>
     <button><a href="{% url 'admin:index' %}">Administración</a></button>
 
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src= "{% static 'core/img/bitcoin.jpg' %} " alt="..." /></div>
+        <div class="col-lg-5">
+            <h1 class="font-weight-light">Imagen</h1>
+            <p>Bitcoin es una moneda digital decentralizada y no depende de ningun gobierno, en este 2024 regresa el halving lo que disparara el precio, eso dicen algunos economistas... Esta es tu gran oportunidad.</p>
+            <a class="btn btn-success" href="http:/wa.me/5491137888670" target="_blank">WhatsApp</a>
+        </div>
+    </div>
+    <!-- Call to Action-->
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+        <div class="card-body"><p class="text-white m-0">Bitcoin es el futuro de la economia mundial, esterate de las ultimas noticias!!</p></div>
+    </div>
+    <!-- Content Row-->
+    <div class="row gx-4 gx-lg-5">
+        {% include 'core/tarjeta.html' with titulo="Tarjeta 1" texto="Texto de la tarjeta 1" %}
+        {% include 'core/tarjeta.html' with titulo="Tarjeta 2" %}
+        {% include 'core/tarjeta.html' with texto="Texto de la tarjeta 3" }
+    </div>
 {% endblock content %}

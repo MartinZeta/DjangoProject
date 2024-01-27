@@ -3,10 +3,11 @@
 #y tenemos que colocar el nombre de la app que creamos en insta  INSTALLED_APPS = ['core']
 from django.urls import path
 
-from .views import index
+from .views import index, about
 
 
 urlpatterns = [
                     #name le da el nombre a este path para ubicarlo
     path("", index, name="index"),
+    path("about/", about, name="about"),
 ]

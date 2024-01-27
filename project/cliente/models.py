@@ -7,6 +7,7 @@ from django.db import models
 
 #la clase "Pais" Hereda la clase "Model", aclaracion, no se 
 #puede heredar modulos se heredan clases, pero de la siguiente manera:
+
 class Pais(models.Model):
                    #CharField se utiliza para saber que la variable es de tipo txt.
                             #max_length es un argumento obligatorio
