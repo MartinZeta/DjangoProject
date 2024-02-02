@@ -77,3 +77,9 @@ class ProductoCategoriaDelete(DeleteView):
 #         consulta.delete()
 #         return redirect("producto:productocategoria_list")
 #     return render(request, "producto/productocategoria_confirm_delete.html", {"object": consulta})
+
+
+class ProductoListDetail(ListView):
+    model = Producto
+    context_object_name = "object_list"
+    #template_name = "producto/productocategoria_list.html"
