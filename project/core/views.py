@@ -16,3 +16,13 @@ class CustomLoginView(LoginView):
     authentication_form = CustomAuthenticationForm
     template_name = 'core/login.html'
     
+def register(request):
+    if request.method == "POST":
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, "core/index.html")
+    else:
+        form = CustomUserCreationForm()
+    return render(request, "core/register.html", {"form": form})
+    
